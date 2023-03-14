@@ -8,9 +8,12 @@ const handleRequest = async (
   reflare.push({
     path: '/*',
     upstream: {
-      domain: 'httpbin.org',
+      domain: 'mangadex.org',
       protocol: 'https',
     },
+    cors: {
+      origin: '*',
+      credentials: true,
   });
 
   return reflare.handle(request);
