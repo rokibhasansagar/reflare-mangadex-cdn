@@ -14,6 +14,7 @@ const handleRequest = async (
     cors: {
       origin: '*',
       credentials: true,
+    },
   });
 
   return reflare.handle(request);
