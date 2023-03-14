@@ -1,4 +1,4 @@
-name = "template"
+name = "mangadexcdn"
 account_id = ""
 usage_model = "bundled"
 workers_dev = true
