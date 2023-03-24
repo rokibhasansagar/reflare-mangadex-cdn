@@ -10,6 +10,12 @@ const handleRequest = async (
     upstream: {
       domain: 'mangadex.org',
       protocol: 'https',
+      port: 443,
+      weight: 1,
+      onRequest: (request: Request, url: string): Request => {
+        // Modifies the URL of the request
+        return new Request(url.replace('api.mangadex.org', 'mangadexapi.phantomzone.workers.dev'), request);
+      },
     },
     cors: {
       origin: '*',
